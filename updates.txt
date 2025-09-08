@@ -1,0 +1,93 @@
+
+
+
+
+[
+    {
+        "id": "sunrisers_hyderabad-rajasthan_royals",
+        "team1": {
+            "name": "Sunrisers Hyderabad",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Sunrisers_Hyderabad_Logo.svg/1200px-Sunrisers_Hyderabad_Logo.svg.png"
+        },
+        "team2": {
+            "name": "Rajasthan Royals",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/This_is_the_logo_for_Rajasthan_Royals%2C_a_cricket_team_playing_in_the_Indian_Premier_League_%28IPL%29.svg/1200px-This_is_the_logo_for_Rajasthan_Royals%2C_a_cricket_team_playing_in_the_Indian_Premier_League_%28IPL%29.svg.png"
+        },
+        "matchTime": "2025-03-23T15:30",
+        "endTime": "1970-01-01T00:00"
+    },
+    
+    
+    
+    {
+        "id": "chennai_super_kings-mumbai_indians",
+        "team1": {
+            "name": "Chennai Super Kings",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Chennai_Super_Kings_Logo.svg/640px-Chennai_Super_Kings_Logo.svg.png"
+        },
+        "team2": {
+            "name": "Mumbai Indians",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Mumbai_Indians_Logo.svg/1200px-Mumbai_Indians_Logo.svg.png"
+        },
+        "matchTime": "2025-03-23T19:30",
+        "endTime": "1970-01-01T00:00"
+    },
+    
+    
+    
+    
+    {
+        "id": "pakistan_-new_zealand_",
+        "team1": {
+            "name": "Delhi Capitals ",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Delhi_Capitals.svg/1200px-Delhi_Capitals.svg.png"
+        },
+        "team2": {
+            "name": "Lucknow Super Giants ",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/a/a9/Lucknow_Super_Giants_IPL_Logo.svg"
+        },
+        "matchTime": "2025-03-24T19:30",
+        "endTime": "1970-01-01T00:00"
+    },
+    {
+        "id": "f1-f1",
+        "team1": {
+            "name": "Gujarat Titans",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/09/Gujarat_Titans_Logo.svg/1200px-Gujarat_Titans_Logo.svg.png"
+        },
+        "team2": {
+            "name": "Punjab Kings",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Punjab_Kings_Logo.svg/1200px-Punjab_Kings_Logo.svg.png"
+        },
+        "matchTime": "2025-03-25T19:30",
+        "endTime": "1970-01-01T00:00"
+    },
+    {
+        "id": "hungary-turkey",
+        "team1": {
+            "name": "Rajasthan Royals",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/This_is_the_logo_for_Rajasthan_Royals%2C_a_cricket_team_playing_in_the_Indian_Premier_League_%28IPL%29.svg/1200px-This_is_the_logo_for_Rajasthan_Royals%2C_a_cricket_team_playing_in_the_Indian_Premier_League_%28IPL%29.svg.png"
+        },
+        "team2": {
+            "name": "Kolkata Knight Riders",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Kolkata_Knight_Riders_Logo.svg/640px-Kolkata_Knight_Riders_Logo.svg.png"
+        },
+        "matchTime": "2025-03-26T19:30",
+                "endTime": "1970-01-01T00:00"
+
+    }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
