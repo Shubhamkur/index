@@ -1,0 +1,245 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>TV4WAP.SITE | LIVE4WAP TV4WAP WAPTV TVGOTK TV4WAP.XYZ</title>
+    <style>
+        /* --- RESET & CORE --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: gold;
+            overflow-x: hidden;
+        }
+
+        /* --- RED PREMIUM HEADER --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 105px; 
+            z-index: 10000;
+  background: linear-gradient(to right, #8B0000);            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 3px solid gold;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        }
+
+        /* Logo Area */
+        .logo-box {align:center;
+            height: 58px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2px;
+        }
+
+        .logo-box img {
+            height: 100%;align:center;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.7));            justify-content: center;
+
+        }
+
+        /* --- STYLISH TELEGRAM BUTTONS --- */
+        .tg-nav {
+            display: flex;
+            gap: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            width: 95%;
+            justify-content: center;
+        }
+
+        .tg-btn {
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(180deg, #0088cc 0%, #005580 100%); /* Telegram Blue Gradient */
+            font-size: 9px;
+            font-weight: 900;
+            padding: 6px 10px;
+            border-radius: 50px; /* Pill shape */
+            text-transform: uppercase;
+            border: 1px solid #fff;
+            display: flex;
+            align-items: center;
+            gap: 4px; /* Space between icon and text */
+            transition: 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.4);
+        }
+
+        /* Telegram SVG Icon Styling */
+        .tg-btn svg {
+            width: 12px;
+            height: 12px;
+            fill: white;
+        }
+
+        .tg-btn:active {
+            transform: scale(0.9);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        @keyframes pulse-light {
+            0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+            70% { box-shadow: 0 0 0 6px rgba(255, 255, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+        }
+
+        /* --- CONTENT SHELL --- */
+        .main-shell {
+            background: linear-gradient(145deg, #e3f9a6, #f9d976); 
+            padding-top: 115px; 
+            padding-bottom: 90px;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            padding: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .channel-card {
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            padding: 12px 5px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            border: 2px solid transparent;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+            transition: 0.2s;
+        }
+
+        .channel-card:active {
+            border-color: gold;
+            transform: scale(0.9);
+        }
+
+        .channel-card img {
+            width: 85%;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 8px;
+        }
+
+        .channel-card b {
+            color: #ffde59;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- FOOTER TABLE --- */
+        .footer-fixed {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: gold;
+            z-index: 10000;
+            border-top: 2px solid #000;
+            border-collapse: collapse;
+        }
+
+        .footer-fixed td { padding: 8px 5px; text-align: center; }
+        .footer-fixed img { height: 35px; border-radius: 5px; }
+        
+        .footer-fixed button {
+            background: #000;
+            color: gold;
+            border: none;
+            font-weight: bold;
+            font-size: 10px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 480px) {
+            .grid-container { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+               <a href="https://tv4wap.site">
+    <div class="logo-box">
+           <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjW6wvHEpvE02_nYcXBcXM_S7y4Vxpn-21eYSBnz228QpfXnAdrMU0BjUdcmk_r0307YLGFSCno-j9xFkKU0Y3NyN97g9cUoyQP18UXvsxxvuVKF0GFa3GWVCZBYvE0GUU4kUPOF8-3H_63rLsevUGGgs7qawM4tCxAq2pKS1jSGD121TWtprWq6xl602A" alt="TV4WAP">
+        </div></a>
+        <div class="tg-nav">
+            <a href="https://t.me/tvgotk" class="tg-btn">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.13-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                LIVE4WAP
+            </a>
+            <a href="https://t.me/tv4wap" class="tg-btn">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.13-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                TV4WAP
+            </a>
+            <a href="https://t.me/waptvgo" class="tg-btn">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.13-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                WAPTVGO
+            </a>
+        </div>
+    </header>
+
+    <div class="main-shell">
+        <div id="app-grid" class="grid-container">
+            </div>
+    </div>
+
+    <table class="footer-fixed">
+        <tr>
+            <td><a href="https://t.me/tvgotk"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEgS2KS8R90zouZEqp4NV8v8mXnUaa0CH4ms-RUnJnRLmYj5zdegccxN10-YXkJArUDOzCjksz77YlETLC63edZYUaDyYBaMPWDVDuyDjYV5bhhhYa5FYgu2qHkd0FcCq-Au_2YXSYza4YGnv1WgRR2O_caQI8nR6SRPJFqKVQICOnjzWhsi3VWe5Nzjewg"></a></td>
+            <td><a href="https://t.me/tvgotk"><button>LIVE4WAP</button></a></td>
+            <td><a href="https://t.me/tv4wap"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEgdW6vop6CO-Sw5e7USP7uj_dCdoQJWSYALuTqDa0Kh5m7H0jl1rSMltPVtDrlKIWPxGe5HLwMd8z_TnDWYFB-ePgb_DbI5LJozDpyvP0L7sK-W422Cm02k3hzZ0XzNhYaJ2A80MT5l7nlebxLL16uFvTKSNRPNr3Ctb51dVMShgVNDsu5XHpCtdVSbW0g"></a></td>
+            <td><a href="https://t.me/tv4wap"><button>TV4WAP</button></a></td>
+        </tr>
+    </table>
+
+    <script>
+        function loadContent() {
+            fetch("https://tvgo.neocities.org/Json/App.txt")
+                .then(res => res.json())
+                .then(json => {
+                    const html = json.map(item => `
+                        <a href="${item.url}" class="channel-card">
+                            <img src="${item.logo}" alt="${item.name}" onerror="this.src='https://via.placeholder.com/70?text=TV'">
+                            <b>${item.name}</b>
+                        </a>
+                    `).join("");
+                    document.getElementById("app-grid").innerHTML = html;
+                })
+                .catch(err => console.log(err));
+        }
+        loadContent();
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
