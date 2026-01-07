@@ -4,9 +4,6 @@
 
 
 
-
-
-
 [
 
 {"name":"LIVE CRICKET","url":"https://waptv.pages.dev","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHdHfpmqU51nsxVxQhUA261t4MfkQMZLoneQ&usqp=CAU"}, 
@@ -36,13 +33,6 @@
 
 {"name":"YUPPTV","url":"https://tvgo.neocities.org/Yupptv","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMeTwS0OgFWR-2pJd0gRxthwByh6Z2Schy9KwZ49pxa1RD8SVwgANEAH0&s=10"}, 
 
-
-
-{"name":"MOVEONJOY","url":"https://tvgo.neocities.org/Moveonjoy","logo":"https://blogger.googleusercontent.com/img/a/AVvXsEjVGJtIpVdQ9Wy1naiAnoECOqFVu_nFBmdIASYk7mml8_BSV6s7SqGa_mErWsB3689D_4EeKOZFQO5NN_pEiUsptgKBAuCQ8gX7PLt8hE0qsRFtuO2FJI80iWJtpn0YX0gTSpOY6GcrrCRJewfXvDigti-kSJMC0wHGBMS6LJgxON9kk1OfP5vMmeVkdhY"}, 
-
-
-
-{"name":"SAMSUNG TV","url":"https://tvgo.neocities.org/samsang","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0_dDDTa0gsebqcP9CZCXVlcVy3fnLbHIMww&s"},
 
 
 
@@ -75,6 +65,15 @@
 {"name":"AKASH GO","url":"https://tvgo.neocities.org/Akashgo","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp4aD0ftdWFb2UAyyr-YNRs6RGK_rDBKsS1xXrcyxe3A&s=10"}, 
 
 
+
+{"name":"MOVEONJOY","url":"https://tvgo.neocities.org/Moveonjoy","logo":"https://blogger.googleusercontent.com/img/a/AVvXsEjVGJtIpVdQ9Wy1naiAnoECOqFVu_nFBmdIASYk7mml8_BSV6s7SqGa_mErWsB3689D_4EeKOZFQO5NN_pEiUsptgKBAuCQ8gX7PLt8hE0qsRFtuO2FJI80iWJtpn0YX0gTSpOY6GcrrCRJewfXvDigti-kSJMC0wHGBMS6LJgxON9kk1OfP5vMmeVkdhY"}, 
+
+
+
+{"name":"SAMSUNG TV","url":"https://tvgo.neocities.org/samsang","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0_dDDTa0gsebqcP9CZCXVlcVy3fnLbHIMww&s"},
+
+
+
 {"name":"TOFFEE","url":"https://tvgo.neocities.org/toffee","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQavvoSig4gi0bSTAOZuyD5XMDv9-TUWR_v-w&usqp=CAU"}, 
 
 
@@ -98,8 +97,6 @@
 
 
 ] 
-
-
 
 
 
