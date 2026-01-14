@@ -35,30 +35,30 @@
 
 {"name":"DISTROTV","url":"https://tvgo.neocities.org/distrotv","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnK8hoFbN_MwvKRFPMJwF2L8gcLvbZqrc3iTFfLuPLEr-73E9lzLiUyPc&s=10"}, 
 
-{"id":"yupptv""name":"YUPPTV","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/yupptv","jsonm3u":"https://tvwab.pages.dev","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMeTwS0OgFWR-2pJd0gRxthwByh6Z2Schy9KwZ49pxa1RD8SVwgANEAH0&s=10"}, 
+{"id":"yupptv","name":"YUPPTV","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/yupptv","jsonm3u":"https://tvwab.pages.dev","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMeTwS0OgFWR-2pJd0gRxthwByh6Z2Schy9KwZ49pxa1RD8SVwgANEAH0&s=10"}, 
 
 
 
 
-{"id":"ayna""name":"AYNA TV","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/ayna","jsonm3u":"https://tvwab.pages.dev","logo":"https://wildroots.ae/wp-content/uploads/2022/12/Ayna-Final-01-300x300.png"}, 
+{"id":"ayna","name":"AYNA TV","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/ayna","jsonm3u":"https://tvwab.pages.dev","logo":"https://wildroots.ae/wp-content/uploads/2022/12/Ayna-Final-01-300x300.png"}, 
 
 
 {"name":"ROARZONE","url":"https://tvgo.neocities.org/Bdxiptv","logo":"https://blogger.googleusercontent.com/img/a/AVvXsEgD2B_NlgX6uHNY2HtmN8Stp-QtOiLXZhcTSfGUI-W-HYTE78sw86jJIO6sCFAfWNzvhqMiAzygol24uMAWSTszkA3wgr2nyHDxhYlmp0sLgj_eoVHg6p_h1qejxpHYIFxoQpRKBxgBUrtP6cgFu1nUI_Xsc-bSmdBJWiTM_0FZzJgyYf7AF6E2esgAwJw"}, 
 
 
 
-{"id":"zee5""name":"ZEE5","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/zee5","jsonm3u":"https://tvwab.pages.dev","logo":"https://upload.wikimedia.org/wikipedia/commons/5/5a/Zee5-official-logo.jpeg"}, 
+{"id":"zee5","name":"ZEE5","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/zee5","jsonm3u":"https://tvwab.pages.dev","logo":"https://upload.wikimedia.org/wikipedia/commons/5/5a/Zee5-official-logo.jpeg"}, 
 
 
 
-{"id":"jiohd""name":"JIOSTAR","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/jiohd","jsonm3u":"https://tvwab.pages.dev","logo":"https://m.media-amazon.com/images/I/31GngoiH5pL.png"}, 
+{"id":"jiohd","name":"JIOSTAR","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/jiohd","jsonm3u":"https://tvwab.pages.dev","logo":"https://m.media-amazon.com/images/I/31GngoiH5pL.png"}, 
 
 
 {"name":"JST SPORTS","url":"https://tvgo.neocities.org/jspo","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0sD58tBuKLAU4pCg4rGyCN51M1IZdh9FICQ&usqp=CAU"}, 
 
 
 
-{"id":"jio""name":"JIOTV","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/jio","jsonm3u":"https://tvwab.pages.dev","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZAphSf5LPrenpV0dNnoZMmwxAB8UZk27Z3F-az3MoACmz0IwdvIRY5Io&s=10"},
+{"id":"jio","name":"JIOTV","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/jio","jsonm3u":"https://tvwab.pages.dev","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZAphSf5LPrenpV0dNnoZMmwxAB8UZk27Z3F-az3MoACmz0IwdvIRY5Io&s=10"},
 
 
 
@@ -66,7 +66,7 @@
 
 
 
-{"id":"akashgo""name":"AKASH GO","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/akashgo","jsonm3u":"https://tvwab.pages.dev","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp4aD0ftdWFb2UAyyr-YNRs6RGK_rDBKsS1xXrcyxe3A&s=10"}, 
+{"id":"akashgo","name":"AKASH GO","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/akashgo","jsonm3u":"https://tvwab.pages.dev","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp4aD0ftdWFb2UAyyr-YNRs6RGK_rDBKsS1xXrcyxe3A&s=10"}, 
 
 
 
