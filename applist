@@ -30,7 +30,7 @@
 
 
 
-{"name":"PISHOW TV","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/pishow","logo":"https://play-lh.googleusercontent.com/eOpDiVz0yhxE2UhJL8mTbh5HNnXykKWgbZSUWOl3af_uxzje0Nfr6nDiigRYTjhialcC"}, 
+{"id":"pishow","name":"PISHOW TV","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/pishow","jsonm3u:"https://tvwabb.pages.dev","logo":"https://play-lh.googleusercontent.com/eOpDiVz0yhxE2UhJL8mTbh5HNnXykKWgbZSUWOl3af_uxzje0Nfr6nDiigRYTjhialcC"}, 
 
 
 {"name":"DISTROTV","url":"https://tvgo.neocities.org/distrotv","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnK8hoFbN_MwvKRFPMJwF2L8gcLvbZqrc3iTFfLuPLEr-73E9lzLiUyPc&s=10"}, 
