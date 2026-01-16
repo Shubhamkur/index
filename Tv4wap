@@ -327,4 +327,398 @@
         <div class="modal-content">
             <h3><i class="fas fa-exclamation-circle"></i> Disclaimer</h3>
             <p>This site is not affiliated with any television channel. All content is copyright of their respective owners. We cannot accept any responsibility for the content on this site. We do not host any content.</p>
-            <div class="contact-box">Contact: 
+            <div class="contact-box">Contact: Wapgotube@gmail.com</div>
+            <button class="close-btn" onclick="toggleDisclaimer()">Close</button>
+        </div>
+    </div>
+
+    <div id="home-view" class="view-section active-view">
+        <div id="app-grid" class="grid-container">
+            <p style="text-align:center; width:300%; font-size:12px; margin-top:20px;">Loading...</p>
+        </div>
+    </div>
+
+    <div id="tvlist-view" class="view-section">
+        <div class="az-filter-container" id="az-bar"></div>
+        <div class="filter-container">
+            <input type="text" id="tv-search" class="search-input" placeholder="Search All Channels..." onkeyup="filterTvList()">
+            <select id="group-select" class="group-select" onchange="filterTvList()">
+                <option value="all">All Groups</option>
+            </select>
+        </div>
+        <div id="tvlist-container" class="grid-container">
+            <p style="text-align:center; width:300%; color:#aaa; font-size:12px;">Loading Default List...</p>
+        </div>
+    </div>
+
+    <div id="sportstv-view" class="view-section">
+        <div id="sportstv-container" class="grid-container">
+            <p style="text-align:center; width:300%; color:#aaa; margin-top:20px;">Loading...</p>
+        </div>
+    </div>
+
+    <div id="matches-view" class="view-section">
+        <div id="matches-container">
+            <p id="matches-loading" style="text-align:center; font-size:14px; margin-top:30px; width:100%; color:#666;">
+                <i class="fas fa-circle-notch fa-spin"></i> Loading Live Matches...
+            </p>
+        </div>
+    </div>
+
+
+    <nav class="bottom-nav">
+        <div class="nav-btn active home-btn" onclick="switchTab('home')">
+            <svg class="nav-svg" viewBox="0 0 512 512">
+                <path fill="#FFC107" d="M256 0L0 236h38v276h178v-138h80v138h178V236h38z"/>
+                <path fill="#FF3D00" d="M0 236L256 0l256 236h-38L256 36 38 236z"/>
+                <path fill="#607D8B" d="M216 374h80v138h-80z"/>
+            </svg>
+            <span class="nav-label">Home</span>
+        </div>
+        
+        <div class="nav-btn tvlist-btn" onclick="switchTab('tvlist')">
+            <svg class="nav-svg" viewBox="0 0 512 512">
+                <path fill="#2196F3" d="M112 48h288v416H112z"/>
+                <path fill="#90CAF9" d="M144 96h224v16H144zm0 64h224v16H144zm0 64h224v16H144z"/>
+                <path fill="#FFC107" d="M192 16h128v48H192z"/>
+                <circle fill="#4CAF50" cx="256" cy="350" r="40"/>
+                <path fill="#fff" d="M246 350l-10-10 20 20 40-40"/>
+            </svg>
+            <span class="nav-label">TV List</span>
+        </div>
+
+        <div class="nav-btn sports-btn" onclick="switchTab('sportstv')">
+            <svg class="nav-svg" viewBox="0 0 512 512">
+                <rect x="32" y="96" width="448" height="320" rx="40" fill="#FF5722"/>
+                <rect x="64" y="128" width="320" height="256" rx="20" fill="#B3E5FC"/>
+                <circle cx="416" cy="160" r="16" fill="#D84315"/>
+                <circle cx="416" cy="224" r="16" fill="#D84315"/>
+                <path stroke="#555" stroke-width="15" stroke-linecap="round" d="M150 96L90 32 M362 96L422 32"/>
+            </svg>
+            <span class="nav-label">Sports Tv</span>
+        </div>
+
+        <div class="nav-btn matches-btn" onclick="switchTab('matches')">
+            <svg class="nav-svg" viewBox="0 0 512 512">
+                <rect x="160" y="150" width="20" height="300" fill="#FFC107"/>
+                <rect x="246" y="150" width="20" height="300" fill="#FFC107"/>
+                <rect x="332" y="150" width="20" height="300" fill="#FFC107"/>
+                <rect x="150" y="140" width="100" height="10" fill="#795548"/>
+                <rect x="260" y="140" width="100" height="10" fill="#795548"/>
+                <circle cx="400" cy="400" r="40" fill="#D50000"/>
+                <path stroke="#fff" stroke-width="3" d="M370 380 q 30 -20 60 0"/>
+            </svg>
+            <span class="nav-label">Matches</span>
+        </div>
+    </nav>
+
+    <script>
+        // Disclaimer
+        function toggleDisclaimer() {
+            const modal = document.getElementById('disclaimer-modal');
+            modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+        }
+        function closeOnOverlay(e) {
+            if(e.target.id === 'disclaimer-modal') toggleDisclaimer();
+        }
+
+        // TABS
+        function switchTab(tabName, fromAppClick = false) {
+            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active-view'));
+            document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabName + '-view').classList.add('active-view');
+
+            if(tabName === 'home') document.querySelector('.home-btn').classList.add('active');
+            if(tabName === 'tvlist') {
+                document.querySelector('.tvlist-btn').classList.add('active');
+                if(!fromAppClick && currentTvData.length === 0) loadAllChannelsMerged(); 
+            }
+            if(tabName === 'sportstv') document.querySelector('.sports-btn').classList.add('active');
+            if(tabName === 'matches') document.querySelector('.matches-btn').classList.add('active');
+        }
+
+        const APPLIST_URL = "https://raw.githubusercontent.com/Shubhamkur/index/refs/heads/main/applist"; 
+
+        async function loadHomeApps() {
+            try {
+                const res = await fetch(APPLIST_URL);
+                const data = await res.json();
+                renderHomeGrid(data, 'app-grid');
+            } catch (err) { console.error(err); }
+        }
+
+        // --- TV LIST MERGED LOGIC ---
+        let currentTvData = []; 
+        let currentFilterLetter = "All";
+
+        async function loadAllChannelsMerged() {
+            document.getElementById('tvlist-container').innerHTML = '<p style="text-align:center; width:300%; margin-top:20px;">Fetching All Channels...</p>';
+            createAZBar(); 
+
+            try {
+                const appsRes = await fetch(APPLIST_URL);
+                const appsData = await appsRes.json();
+                let allChans = [];
+                const promises = appsData.map(async (app) => {
+                    if(!app.url || !app.id) return [];
+                    try {
+                        const cRes = await fetch(app.url);
+                        const cData = await cRes.json();
+                        const items = cData.data || cData;
+                        return items.map(ch => ({
+                            name: ch.name || ch.title || "Unknown",
+                            logo: ch.logo || "https://placehold.co/100?text=TV",
+                            id: ch.id || ch.name,
+                            group: ch.genre || "General",
+                            player: app.jsonm3u,
+                            homeId: app.id
+                        }));
+                    } catch(e) { return []; }
+                });
+
+                const results = await Promise.all(promises);
+                results.forEach(r => allChans = [...allChans, ...r]);
+                allChans.sort((a, b) => a.name.localeCompare(b.name));
+
+                currentTvData = allChans;
+                filterTvList(); 
+
+            } catch (e) {
+                document.getElementById('tvlist-container').innerHTML = '<p>Failed to load data.</p>';
+            }
+        }
+
+        async function openSingleApp(url, playerHost, homeId, appName) {
+            switchTab('tvlist', true);
+            document.getElementById('tvlist-container').innerHTML = '<p>Loading...</p>';
+            try {
+                const res = await fetch(url);
+                const data = await res.json();
+                const items = data.data || data;
+                currentTvData = items.map(ch => ({
+                    name: ch.name || ch.title || "Unknown",
+                    logo: ch.logo || "https://placehold.co/100?text=TV",
+                    id: ch.id || ch.name,
+                    group: ch.genre || "General",
+                    player: playerHost,
+                    homeId: homeId
+                }));
+                currentTvData.sort((a, b) => a.name.localeCompare(b.name));
+                populateFilter(); // Ensure filter works
+                renderTvList(currentTvData);
+            } catch(e) { console.log(e); }
+        }
+
+        function renderHomeGrid(data, containerId) {
+            const html = data.map(item => {
+                const appName = item.name || item.title || "Unknown";
+                const appLogo = item.logo ? item.logo : "https://placehold.co/400x250/e0e0e0/333333?text=APP";
+                if (item.id) {
+                    return `<div class="exam-card" onclick="openSingleApp('${item.url}', '${item.jsonm3u}', '${item.id}', '${appName}')">
+                            <div class="card-icon-bg"><img src="${appLogo}"></div><b>${appName}</b></div>`;
+                } else {
+                    return `<a href="${item.url}" target="_blank" class="exam-card">
+                            <div class="card-icon-bg"><img src="${appLogo}"></div><b>${appName}</b></a>`;
+                }
+            }).join("");
+            document.getElementById(containerId).innerHTML = html;
+        }
+
+        function populateFilter() {
+            const groups = [...new Set(currentTvData.map(i => i.group))].sort();
+            const select = document.getElementById('group-select');
+            select.innerHTML = '<option value="all">All Groups</option>';
+            groups.forEach(g => { const opt = document.createElement('option'); opt.value = g; opt.textContent = g; select.appendChild(opt); });
+        }
+
+        function renderTvList(data) {
+            if(data.length === 0) { document.getElementById('tvlist-container').innerHTML = '<p>No channels found.</p>'; return; }
+            const html = data.map(item => {
+                const host = item.player || "https://tv4go.pages.dev";
+                const playLink = `${host}/?id=${item.id}&name=${item.homeId}`;
+                return `
+                    <a href="${playLink}" class="exam-card">
+                        <div class="card-icon-bg"><img src="${item.logo}"></div><b>${item.name}</b>
+                    </a>`;
+            }).join("");
+            document.getElementById('tvlist-container').innerHTML = html;
+        }
+
+        function createAZBar() {
+            const azContainer = document.getElementById('az-bar');
+            const letters = ['All', ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')];
+            azContainer.innerHTML = letters.map(l => 
+                `<button class="az-btn ${l === 'All' ? 'active' : ''}" onclick="filterByLetter('${l}', this)">${l}</button>`
+            ).join('');
+        }
+
+        function filterByLetter(letter, btn) {
+            document.querySelectorAll('.az-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentFilterLetter = letter;
+            if(letter === 'All') { filterTvList(); } else {
+                const filtered = currentTvData.filter(i => i.name.toUpperCase().startsWith(letter));
+                renderTvList(filtered);
+            }
+        }
+
+        function filterTvList() {
+            const term = document.getElementById('tv-search').value.toLowerCase();
+            const group = document.getElementById('group-select').value;
+            const filtered = currentTvData.filter(i => i.name.toLowerCase().includes(term) && (group==='all' || i.group===group));
+            renderTvList(filtered);
+        }
+
+        // --- SPORTS TV (Direct Links) ---
+        const LIVETV_JSON = "https://raw.githubusercontent.com/Shubhamkur/Tv/refs/heads/main/tvid";
+        async function loadLiveTv() {
+            try {
+                const res = await fetch(LIVETV_JSON); const data = await res.json();
+                document.getElementById('sportstv-container').innerHTML = (data.data||data).map(item => `
+                    <div class="exam-card" onclick="window.location.href='https://tv4go.pages.dev/?id=${item.id}'">
+                        <div class="card-icon-bg"><img src="${item.logo||'https://placehold.co/100?text=TV'}"></div><b>${item.name}</b>
+                    </div>`).join("");
+            } catch (e) { console.log(e); }
+        }
+
+        // --- NEW PREMIUM MATCHES LOGIC ---
+        const MATCH_JSON_URLS = ['https://raw.githubusercontent.com/Shubhamkur/updatez/refs/heads/main/update', 'https://raw.githubusercontent.com/Shubhamkur/updatez/refs/heads/main/update1', 'https://raw.githubusercontent.com/Shubhamkur/updatez/refs/heads/main/update2', 
+'https://raw.githubusercontent.com/Shubhamkur/updatez/refs/heads/main/update3', 'https://raw.githubusercontent.com/Shubhamkur/updatez/refs/heads/main/update4', 'https://raw.githubusercontent.com/Shubhamkur/updatez/refs/heads/main/update5', 
+'https://raw.githubusercontent.com/Shubhamkur/updatez/refs/heads/main/update6', 'https://raw.githubusercontent.com/Shubhamkur/updatez/refs/heads/main/update7', 'https://raw.githubusercontent.com/Shubhamkur/updatez/refs/heads/main/update8', 
+'https://raw.githubusercontent.com/Shubhamkur/updatez/refs/heads/main/update9'];
+
+        function toggleMatchLinks(id) {
+            const el = document.getElementById(`mlinks-${id}`);
+            const all = document.querySelectorAll('.links-area');
+            const isVisible = el.style.display === 'block';
+            all.forEach(x => x.style.display = 'none');
+            if(!isVisible) el.style.display = 'block';
+        }
+
+        function getMatchDateObject(dateStr, timeStr) {
+            let [time, modifier] = timeStr.split(' ');
+            let [hours, minutes] = time.split(':');
+            if (hours === '12') hours = '00';
+            if (modifier.toLowerCase() === 'pm') hours = parseInt(hours, 10) + 12;
+            return new Date(`${dateStr}T${hours}:${minutes}:00`);
+        }
+
+        function getCountdown(matchDateObj) {
+            const now = new Date();
+            const diff = matchDateObj - now;
+            if (diff < 0) return { d:'00',h:'00',m:'00',s:'00', isLive: true };
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
+            return { d:d.toString().padStart(2,'0'), h:h.toString().padStart(2,'0'), m:m.toString().padStart(2,'0'), s:s.toString().padStart(2,'0'), isLive: false };
+        }
+
+        function startTimer(matchDateObj, elementId) {
+            const el = document.getElementById(elementId);
+            if(!el) return;
+            const update = () => {
+                const t = getCountdown(matchDateObj);
+                if (t.isLive) {
+                    el.innerHTML = '<div class="live-indicator">● LIVE NOW</div>'; return;
+                }
+                const circles = el.getElementsByClassName('cd-circle');
+                if(circles.length > 0) {
+                    circles[0].innerText = t.d; circles[1].innerText = t.h;
+                    circles[2].innerText = t.m; circles[3].innerText = t.s;
+                }
+            };
+            update(); setInterval(update, 1000);
+        }
+
+        async function loadMatches() {
+            const container = document.getElementById('matches-container');
+            const promises = MATCH_JSON_URLS.map((url, idx) => fetch(url).then(r=>r.ok?r.json():null).then(d=>({data:d, theme:idx})).catch(e=>null));
+            const results = await Promise.all(promises);
+            const valid = results.filter(x => x && x.data && x.data.matches);
+
+            if(valid.length === 0) { container.innerHTML = "<p style='text-align:center; padding:20px;'>No Active Tournaments.</p>"; return; }
+
+            container.innerHTML = ''; // Clear loading
+            const now = new Date();
+            let matchesToShow = [];
+
+            valid.forEach(({data, theme}) => {
+                let tournamentMatches = [];
+                data.matches.forEach(m => {
+                    const start = getMatchDateObject(m.date, m.time);
+                    const end = new Date(start.getTime() + (6*60*60*1000));
+                    if(now < end) {
+                        m.startObj = start;
+                        m.tournament = data.tournament;
+                        m.links = data.global_streaming_links;
+                        m.theme = theme;
+                        tournamentMatches.push(m);
+                    }
+                });
+                tournamentMatches.sort((a,b)=>a.startObj - b.startObj);
+                if(tournamentMatches.length > 0) matchesToShow.push(tournamentMatches[0]);
+            });
+
+            matchesToShow.sort((a,b)=>a.startObj - b.startObj);
+
+            if(matchesToShow.length === 0) { container.innerHTML = "<p style='text-align:center; padding:20px;'>No live matches right now.</p>"; return; }
+
+            matchesToShow.forEach((m, idx) => {
+                const uid = `match-${idx}`;
+                const dateStr = m.startObj.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+                
+                let linksHtml = '';
+                if(m.links && m.links.length > 0) {
+                    linksHtml = m.links.map((l, li) => {
+                        let u = typeof l === 'object' ? l.url : l;
+                        let n = typeof l === 'object' ? l.name : `Link ${li+1}`;
+                        let i = typeof l === 'object' && l.logo ? l.logo : `https://placehold.co/50x50/eee/333?text=${li+1}`;
+                        return `<a href="${u}" class="channel-item-match"><img src="${i}" class="channel-logo-match"><span class="channel-name-match">${n}</span></a>`;
+                    }).join('');
+                } else { linksHtml = "<p style='font-size:10px;text-align:center;width:100%;color:#888;'>No Links Yet</p>"; }
+
+                const card = document.createElement('div');
+                card.className = `match-card theme-${m.theme}`;
+                card.setAttribute('onclick', `toggleMatchLinks('${uid}')`);
+                card.innerHTML = `
+                    <div class="card-header-match">${m.tournament} | Match ${m.match_no}</div>
+                    <div class="card-body-match">
+                        <div class="team-block">
+                            <img src="${m.home_team_logo}" class="team-logo"><span class="team-name">${m.home_team}</span>
+                        </div>
+                        <div class="center-section">
+                            <div class="countdown-container" id="timer-${uid}">
+                                <div class="cd-box"><div class="cd-circle">00</div><div class="cd-label">DAY</div></div>
+                                <div class="cd-box"><div class="cd-circle">00</div><div class="cd-label">HR</div></div>
+                                <div class="cd-box"><div class="cd-circle">00</div><div class="cd-label">MIN</div></div>
+                                <div class="cd-box"><div class="cd-circle">00</div><div class="cd-label">SEC</div></div>
+                            </div>
+                            <div class="date-pill"><i class="far fa-calendar-alt"></i> ${dateStr} • ${m.time}</div>
+                        </div>
+                        <div class="team-block">
+                            <img src="${m.away_team_logo}" class="team-logo"><span class="team-name">${m.away_team}</span>
+                        </div>
+                    </div>
+                    <div id="mlinks-${uid}" class="links-area">${linksHtml}</div>
+                `;
+                container.appendChild(card);
+                startTimer(m.startObj, `timer-${uid}`);
+            });
+        }
+
+        window.onload = () => {
+            const query = decodeURIComponent(window.location.search.substring(1)).replace(/\+/g, ' ');
+            if (query) {
+                document.getElementById('tv-search').value = query;
+                switchTab('tvlist'); 
+            } else {
+                loadHomeApps();
+            }
+            loadMatches();
+            loadLiveTv();
+            document.addEventListener('contextmenu', e=>e.preventDefault());
+        };
+    </script>
+</body>
+</html>
