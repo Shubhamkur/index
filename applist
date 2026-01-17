@@ -22,7 +22,7 @@
 {"name":"DD FREE DISH","url":"https://live4wap.pages.dev/","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTISKBvMKqNYGATGweOZUTm1lzqj0R7UEtUKA&usqp=CAU"},
 
 
-{"name":"TOFFEE","url":"https://tvgo.neocities.org/toffee","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQavvoSig4gi0bSTAOZuyD5XMDv9-TUWR_v-w&usqp=CAU"}, 
+{"id":"toffee","name":"TOFFEE","url":"https://raw.githubusercontent.com/Shubhamkur/m3u/refs/heads/main/toffee","jsonm3u":"https://tv4wab.pages.dev","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQavvoSig4gi0bSTAOZuyD5XMDv9-TUWR_v-w&usqp=CAU"}, 
 
 
 
@@ -35,7 +35,7 @@
 {"id":"pishow","name":"PISHOW TV","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/pishow","jsonm3u":"https://tv4wabb.pages.dev","logo":"https://play-lh.googleusercontent.com/eOpDiVz0yhxE2UhJL8mTbh5HNnXykKWgbZSUWOl3af_uxzje0Nfr6nDiigRYTjhialcC"}, 
 
 
-{"name":"DISTROTV","url":"https://tvgo.neocities.org/distrotv","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnK8hoFbN_MwvKRFPMJwF2L8gcLvbZqrc3iTFfLuPLEr-73E9lzLiUyPc&s=10"}, 
+{"id":"distrotv","name":"DISTROTV","url":"https://raw.githubusercontent.com/Shubhamkur/m3u/refs/heads/main/distrotv","jsonm3u":"https://tv4webb.pages.dev","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnK8hoFbN_MwvKRFPMJwF2L8gcLvbZqrc3iTFfLuPLEr-73E9lzLiUyPc&s=10"}, 
 
 {"id":"yupptv","name":"YUPPTV","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/yupptv","jsonm3u":"https://tv4wep.pages.dev","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMeTwS0OgFWR-2pJd0gRxthwByh6Z2Schy9KwZ49pxa1RD8SVwgANEAH0&s=10"}, 
 
@@ -45,7 +45,7 @@
 {"id":"ayna","name":"AYNA TV","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/ayna","jsonm3u":"https://tv4wep.pages.dev","logo":"https://wildroots.ae/wp-content/uploads/2022/12/Ayna-Final-01-300x300.png"}, 
 
 
-{"name":"ROARZONE","url":"https://tvgo.neocities.org/Bdxiptv","logo":"https://blogger.googleusercontent.com/img/a/AVvXsEgD2B_NlgX6uHNY2HtmN8Stp-QtOiLXZhcTSfGUI-W-HYTE78sw86jJIO6sCFAfWNzvhqMiAzygol24uMAWSTszkA3wgr2nyHDxhYlmp0sLgj_eoVHg6p_h1qejxpHYIFxoQpRKBxgBUrtP6cgFu1nUI_Xsc-bSmdBJWiTM_0FZzJgyYf7AF6E2esgAwJw"}, 
+{"id":"bdxiptv","name":"ROARZONE","url":"https://raw.githubusercontent.com/Shubhamkur/m3u/refs/heads/main/Bdxiptv","jsonm3u":"https://tv4wab.pages.dev","logo":"https://blogger.googleusercontent.com/img/a/AVvXsEgD2B_NlgX6uHNY2HtmN8Stp-QtOiLXZhcTSfGUI-W-HYTE78sw86jJIO6sCFAfWNzvhqMiAzygol24uMAWSTszkA3wgr2nyHDxhYlmp0sLgj_eoVHg6p_h1qejxpHYIFxoQpRKBxgBUrtP6cgFu1nUI_Xsc-bSmdBJWiTM_0FZzJgyYf7AF6E2esgAwJw"}, 
 
 
 
@@ -64,7 +64,7 @@
 
 
 
-{"name":"JAGOBD","url":"https://tvgo.neocities.org/jagobd","logo":"https://play-lh.googleusercontent.com/B7eTFyvy4CgBsHSGTP66pFaJ637P9Ihkoq-ZMP2zQPwlXr5QrJdFNIsK6taIbjbdcAc"}, 
+{"id":"jagobd","name":"JAGOBD","url":"https://raw.githubusercontent.com/Shubhamkur/m3u/refs/heads/main/jagobd","jsonm3u":"https://tv4wab.pages.dev","logo":"https://play-lh.googleusercontent.com/B7eTFyvy4CgBsHSGTP66pFaJ637P9Ihkoq-ZMP2zQPwlXr5QrJdFNIsK6taIbjbdcAc"}, 
 
 
 
@@ -84,7 +84,7 @@
 
 
 
-{"name":"JIOVOOT","url":"https://tvgo.neocities.org/voot","logo":"https://play-lh.googleusercontent.com/ZKwMnzgcpkbUjmilHO68k_xR8HmN1_3vXo03v7s3ey0V92-VcEjS6fQNQcm4SKcPU8w"}
+{"id":"voot","name":"JIOVOOT","url":"https://raw.githubusercontent.com/Shubhamkur/m3u/refs/heads/main/voot","jsonm3u":"https://tv4wab.pages.dev","logo":"https://play-lh.googleusercontent.com/ZKwMnzgcpkbUjmilHO68k_xR8HmN1_3vXo03v7s3ey0V92-VcEjS6fQNQcm4SKcPU8w"}
 
 
 
