@@ -35,7 +35,7 @@
 {"id":"pishow","name":"PISHOW TV","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/pishow","jsonm3u":"https://tv4wabb.pages.dev","logo":"https://play-lh.googleusercontent.com/eOpDiVz0yhxE2UhJL8mTbh5HNnXykKWgbZSUWOl3af_uxzje0Nfr6nDiigRYTjhialcC"}, 
 
 
-{"id":"distrotv","name":"DISTROTV","url":"https://raw.githubusercontent.com/Shubhamkur/m3u/refs/heads/main/distrotv","jsonm3u":"https://tv4webb.pages.dev","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnK8hoFbN_MwvKRFPMJwF2L8gcLvbZqrc3iTFfLuPLEr-73E9lzLiUyPc&s=10"}, 
+{"id":"distrotv","name":"DISTROTV","url":"https://raw.githubusercontent.com/Shubhamkur/m3u/refs/heads/main/distrotv","jsonm3u":"https://tv4web.pages.dev","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnK8hoFbN_MwvKRFPMJwF2L8gcLvbZqrc3iTFfLuPLEr-73E9lzLiUyPc&s=10"}, 
 
 {"id":"yupptv","name":"YUPPTV","url":"https://raw.githubusercontent.com/Shubhamkur/json/refs/heads/main/yupptv","jsonm3u":"https://tv4wep.pages.dev","logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMeTwS0OgFWR-2pJd0gRxthwByh6Z2Schy9KwZ49pxa1RD8SVwgANEAH0&s=10"}, 
 
@@ -84,7 +84,7 @@
 
 
 
-{"id":"voot","name":"JIOVOOT","url":"https://raw.githubusercontent.com/Shubhamkur/m3u/refs/heads/main/voot","jsonm3u":"https://tv4wab.pages.dev","logo":"https://play-lh.googleusercontent.com/ZKwMnzgcpkbUjmilHO68k_xR8HmN1_3vXo03v7s3ey0V92-VcEjS6fQNQcm4SKcPU8w"}
+{"id":"voot","name":"JIOVOOT","url":"https://raw.githubusercontent.com/Shubhamkur/m3u/refs/heads/main/movie","jsonm3u":"https://tv4wab.pages.dev","logo":"https://play-lh.googleusercontent.com/ZKwMnzgcpkbUjmilHO68k_xR8HmN1_3vXo03v7s3ey0V92-VcEjS6fQNQcm4SKcPU8w"}
 
 
 
